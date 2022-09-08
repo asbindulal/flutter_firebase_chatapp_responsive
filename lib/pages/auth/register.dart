@@ -1,5 +1,5 @@
 import 'package:chatapp/pages/auth/login.dart';
-import 'package:chatapp/pages/desktop.dart';
+import 'package:chatapp/pages/homepage.dart';
 import 'package:chatapp/utility/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -97,7 +97,7 @@ class UserRegister extends StatelessWidget {
 
                               Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
-                                  builder: (context) => const DesktopHomePage(),
+                                  builder: (context) => const HomePage(),
                                 ),
                               );
                             });

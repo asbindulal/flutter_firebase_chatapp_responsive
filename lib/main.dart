@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:chatapp/pages/auth/login.dart';
-import 'package:chatapp/pages/desktop.dart';
+import 'package:chatapp/pages/homepage.dart';
+import 'package:chatapp/utility/constant.dart';
 import 'package:chatapp/utility/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: grey,
       ),
       home: const SplashScreen(),
     );
@@ -56,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
         } else {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
-              builder: (context) => const DesktopHomePage(),
+              builder: (context) => const HomePage(),
             ),
           );
         }
@@ -69,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return const Scaffold(
       body: Center(
         child: CircularProgressIndicator(
-          color: Colors.blueAccent,
+          color: red,
         ),
       ),
     );
